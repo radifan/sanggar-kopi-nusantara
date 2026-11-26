@@ -1,0 +1,51 @@
+/* Konfigurasi Tipografi & Utilitas Kustom */
+:root {
+  --color-cream: #F6F1E9;
+  --color-olive: #6B705C;
+  --color-terracotta: #CB6D51;
+  --color-ink: #2B2A27;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom Scrollbar Halus untuk Drawer Keranjang */
+#cart-items-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+#cart-items-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#cart-items-container::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 112, 92, 0.35);
+  border-radius: 9999px;
+}
+
+/* Animasi Masuk Toast */
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-enter {
+  animation: toastSlideIn 0.25s ease-out forwards;
+}
